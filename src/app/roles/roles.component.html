@@ -1,0 +1,31 @@
+
+<form [formGroup]="rolesForm" (ngSubmit)="onSave()">
+    <label>
+        Nombre del Rol :
+        <input type="text" name = "rolename" formControlName= "rolename" />
+    </label> 
+    <button [disabled]="!rolesForm.valid">Guardar</button>
+</form>
+
+<p>
+    Value: {{ rolesForm.status }}
+</p>
+
+<!-- 
+<form #rolform="ngForm">
+    Name<input type="text" 
+        [(ngModel)]="rol.nombre" 
+        class="form-control" 
+        id = "nombre" 
+        name ="nombre" />
+
+    Mail<input type="text"
+        [(ngModel)]="rol.correo" 
+        class="form-control" 
+        id = "correo" 
+        name ="correo"/>
+
+    {{rol.nombre}}
+    {{rol.correo}}
+    <button (click) = "onSave()" >Guardar</button>
+</form> -->
