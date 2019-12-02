@@ -1,0 +1,10 @@
+<form [formGroup]="rolesForm" (ngSubmit)="save()">     
+    <label>
+        Nombre:
+        <input type="text" formControlName="rolename">
+    </label>
+    <button [disabled]="!rolesForm.valid" >Guardar</button>
+    <p>
+        Value: {{ rolesForm.status }}
+    </p>
+</form>
